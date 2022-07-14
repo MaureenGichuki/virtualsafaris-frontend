@@ -1,16 +1,17 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef,OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable, of } from 'rxjs';
 import { filter, switchMap } from 'rxjs/operators';
 import { CallService } from '../call.service';
-import { CallInfoDialogComponents, DialogData } from '../dialog/dialog.component'
+import { DialogComponents, DialogData} from '../dialog/dialog.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-tour',
   templateUrl: './tour.component.html',
   styleUrls: ['./tour.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class TourComponent implements OnInit, OnDestroy {
+
   public isCallStarted$: Observable<boolean>;
   private peerId: string;
 
@@ -37,7 +38,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public showModal(joinCall: boolean): void {
     let dialogData: DialogData = joinCall ? ({ peerId: null, joinCall: true }) : ({ peerId: this.peerId, joinCall: false });
-    const dialogRef = this.dialog.open(CallInfoDialogComponents, {
+    const dialogRef = this.dialog.open(DialogComponents, {
       width: '250px',
       data: dialogData
     });
@@ -55,4 +56,3 @@ export class AppComponent implements OnInit, OnDestroy {
     this.callService.closeMediaCall();
   }
 }
-

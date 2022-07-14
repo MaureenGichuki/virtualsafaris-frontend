@@ -8,6 +8,8 @@ import {MatCardModule} from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core'; 
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,13 +28,13 @@ import { Safari2Component } from './safari2/safari2.component';
 import { Safari3Component } from './safari3/safari3.component';
 import { BookingsComponent } from './bookings/bookings.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CallInfoDialogComponents } from './virtual-tour/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { CallService } from './virtual-tour/call.service';
-
-
+import { CallService } from './call.service';
+import { TourComponent } from './tour/tour.component';
+import { DialogComponents } from './dialog/dialog.component';
+import { DialogModule } from '@angular/cdk/dialog';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,12 @@ import { CallService } from './virtual-tour/call.service';
     Safari2Component,
     Safari3Component,
     BookingsComponent,
+    TourComponent,
+    DialogComponents,
+
+    
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -72,10 +80,11 @@ import { CallService } from './virtual-tour/call.service';
     ClipboardModule,
     MatSnackBarModule,
     CommonModule,
-    CallInfoDialogComponents,
-
+    Component,
+    DialogModule,
    
   ],
+
   providers: [
     CallService
   ],

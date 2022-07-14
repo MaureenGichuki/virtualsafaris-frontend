@@ -8,6 +8,7 @@ import { PaymentComponent } from './payment/payment.component';
 import {LoginComponent} from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { BookingsComponent } from './bookings/bookings.component';
+import { TourComponent } from './tour/tour.component';
 
 
 const routes: Routes = [
@@ -17,9 +18,11 @@ const routes: Routes = [
   {path: 'safari1', component: Safari1Component },
   {path: 'safari2', component: Safari2Component},
   {path: 'safari3', component: Safari3Component },
+  {path: 'tour', component: TourComponent },
   { path: 'pay', component: PaymentComponent },
   { path: '/login', component:LoginComponent },
   { path: '/register', component:RegisterComponent },
+
 
   
   ];
