@@ -51,9 +51,6 @@ import { DialogModule } from '@angular/cdk/dialog';
     BookingsComponent,
     TourComponent,
     DialogComponents,
-
-    
-    
     
   ],
   imports: [
@@ -82,6 +79,8 @@ import { DialogModule } from '@angular/cdk/dialog';
     CommonModule,
     Component,
     DialogModule,
+   
+
    
   ],
 

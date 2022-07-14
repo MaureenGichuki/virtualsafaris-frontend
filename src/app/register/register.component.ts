@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
 
 
   submit(): void {
-    this.http.post('http://127.0.0.1:8000/register', this.form.getRawValue())
+    this.http.post('https://virtualsafaris-backend.herokuapp.com/api/tourist/register', this.form.getRawValue())
       .subscribe(() => this.router.navigate(['/login']));
   }
 }

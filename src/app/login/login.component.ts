@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     }
 
     submit(): void {
-      this.http.post('https://virtualsafaris-backend.herokuapp.com//api/tourist/login/', this.form.getRawValue(), {
+      this.http.post('https://virtualsafaris-backend.herokuapp.com/api/tourist/login/', this.form.getRawValue(), {
         withCredentials: true
       }).subscribe(() => this.router.navigate(['/']));
     }
